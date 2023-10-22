@@ -4,7 +4,9 @@ let request = document.querySelector("#searchPhone");
 let ansArray=[];
 let showDetails = document.querySelector(".showDetails");
 showDetails.style.display = "none";
-
+// document.querySelector(".showItem-container").style.height="150vh";
+let showAll=document.querySelector(".showAll");
+showAll.style.display="none";
 async function static() {
   try {
     let response = await fetch(
@@ -28,6 +30,7 @@ search.addEventListener("click", (e) => {
   document.querySelectorAll(".item button");
   e.preventDefault();
   fetchData(request.value);
+  showAll.style.display="block"
 });
 
 
@@ -68,7 +71,15 @@ async function fetchData(dataToBeSearch) {
 }
 
 
-
+showAll.addEventListener("click", ()=>{
+  document.querySelector(".showItem-container").classList.toggle("showLess");
+  if(showAll.innerText=="Show Less"){
+    console.log(showAll.innerText);
+    showAll.innerText="Show All"
+  }else {
+    showAll.innerText="Show Less"
+  }
+  })
 
 function showMobileDetails(btn) {
   btn.forEach((val, idx) => {

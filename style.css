@@ -103,9 +103,13 @@ margin: 100px 0;
 .showItem-container{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
+    height: 150vh;
+    margin-top: 30px;
+    
 }
 .item{
     width: 30%;
@@ -197,4 +201,17 @@ footer{
     margin: 10px 0;
     color:  rgb(12, 12, 97);
     font-weight: bold;
+}
+
+.showAll{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    /* height: 150vh; */
+}
+.item{
+    margin-bottom: 50px;
+}
+.showLess{
+    height: auto;
 }
