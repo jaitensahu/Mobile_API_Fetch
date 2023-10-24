@@ -209,6 +209,13 @@ footer{
     font-weight: bold;
     /* height: 150vh; */
 }
+.showItem-container div{
+    transition: 0.2s ease-in-out;
+}
+.showItem-container div:hover{
+    transform: scale(1.1);
+    box-shadow: 0 15px 20px black;
+}
 .item{
     margin-bottom: 50px;
 }
